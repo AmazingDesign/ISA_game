@@ -2,6 +2,14 @@ $(document).ready(function(){
     console.log('jQuery ready!');
 
 
+
+    //Główne menu z przyciskami//
+    $( "#play" ).click(function() {
+        $('#menu').css({'display' : 'none'});
+        $('#main').css({'display' : 'block'});
+
+    });
+    var $allPoints = '0';
     //setInterwal odpowiada za wykonywanie funkcji co sekunde
     var $food = setInterval(function(){
         //tworze diva o klasie goodFood i przypisuje go do diva glownego/ SPADAJACE JEDZENIE
@@ -55,7 +63,7 @@ $(document).ready(function(){
                 playerLeft = parseInt($('#player').css('left'));
                 playerRight = playerLeft + 60;
                 top++;
-                element.style.top = top + 'px'
+                element.style.top = top + 'px';
                 if (top > 560) {
                     //   console.log('interval cleared!');
                     clearInterval(id);

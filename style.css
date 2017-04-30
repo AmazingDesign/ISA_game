@@ -2,9 +2,29 @@
 	position: relative;
 	width: 600px;
 	height: 600px;
-	background-image: url("img/background.jpg");
+	background-image: url("img/background2.jpg");
 	margin-right: auto;
 	margin-left: auto;
+    display: none;
+}
+#menu {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background-image: url("img/menu-background.jpg");
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+
+}
+
+.menu-list {
+    padding-top: 350px;
+    font-size: 30px;
+}
+
+#play:hover {
+    transform: scale(1.1);
 }
 
 #player {
@@ -44,5 +64,5 @@
 	width: auto;
 	height: 50px;
 	background-color: #f00;
-	background-image: url("img/ground.jpg");
+	background-image: url("img/ground2.jpg");
 }
