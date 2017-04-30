@@ -1,0 +1,48 @@
+#main {
+	position: relative;
+	width: 600px;
+	height: 600px;
+	background-image: url("img/background.jpg");
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#player {
+	width: 60px;
+	height: 100px;
+	position: relative;
+	left: 300px;
+	top: 455px;
+
+}
+
+#goodFood {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 35px;
+	height: 35px;
+}
+
+#badFood {
+	position: absolute;
+	top: 0;
+	left: 10px;
+	width: 35px;
+	height: 35px;
+}
+
+#points {
+	position: relative;
+	left:0;
+	top: 10px;
+	color: white;
+}
+
+#ground {
+	margin-top: 450px;
+	width: auto;
+	height: 50px;
+	background-color: #f00;
+	background-image: url("img/ground.jpg");
+}
