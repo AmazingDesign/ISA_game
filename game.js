@@ -59,13 +59,10 @@ $(document).ready(function(){
         function animate(element, speed) {
             var top = 0;
             var id = setInterval(function () {
-                checkOverlay(element);
-                playerLeft = parseInt($('#player').css('left'));
-                playerRight = playerLeft + 60;
                 top++;
                 element.style.top = top + 'px';
+                checkOverlay(element, id);
                 if (top > 560) {
-                    //   console.log('interval cleared!');
                     clearInterval(id);
                     element.remove();
                 }
@@ -73,13 +70,25 @@ $(document).ready(function(){
         }
 
 
-        // funkcja ktora łapie elementy i wyswietla w konsoli punkty i usuwa element w momencie złapania go //
-        function checkOverlay(element){
-            if(element.style.top.replace('px', '') > 500  && playerLeft < element.style.left.replace('px', '')  && element.style.left.replace('px', '') < playerRight ) {
-                console.log('punkt');
+        function checkOverlay(element, interval) {
+            var $allPoints = 0;
+            var playerLeft = parseInt($('#player').css('left'));
+            var playerRight = playerLeft + 60;
+            if (element.style.top.replace('px', '') > 500 && playerLeft < element.style.left.replace('px', '') && element.style.left.replace('px', '') < playerRight) {
                 element.remove();
+                clearInterval(interval);
+                scoreUp();
             }
         }
+
+        function scoreUp() {
+            console.log('+1');
+        }
+
+        function scoreDown() {
+            console.log('-1');
+        }
+
 
 
 
